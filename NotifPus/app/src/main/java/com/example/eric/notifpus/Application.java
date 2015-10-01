@@ -23,7 +23,7 @@ public class Application extends android.app.Application {
 
 
     //Se crea el usuario aqui
-    String name="1";
+    String name="2";
     String passw="12345";
     String usuario=name;
     String pass=passw;
