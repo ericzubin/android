@@ -594,7 +594,7 @@ public class NuevoPedido extends ActionBarActivity {
 		 * **/
 		protected void onPostExecute(String file_url) {
 			pDialog.dismiss();
-			
+
 			if(textImagen.getText().toString().equals("No hay imagen"))
 			{
 				Log.d("accion", "no hay imagen que subir");
@@ -606,7 +606,7 @@ public class NuevoPedido extends ActionBarActivity {
 				//Toast.makeText(getApplicationContext(), "No se agregara imagen", Toast.LENGTH_SHORT).show();
 			}else
 			{
-				if (file.exists()) 
+				if (file.exists())
 				{
 					Log.d("accion", "existe");
 					UploaderFoto nuevaTarea = new UploaderFoto(NuevoPedido.this); //se envia el context
@@ -616,9 +616,9 @@ public class NuevoPedido extends ActionBarActivity {
 						nuevop="no";
 						nuevaTarea.execute(dato,url_fotos_piezas.getBytes(),nameImag.getBytes(),carpeta.getBytes(),IdUsr.getBytes(),foto.getBytes());
 					}
-					else 
+					else
 						{
-						
+
 						//finish();
 						Intent i = new Intent("com.embeddedLapps.MisSubastas");
 						i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

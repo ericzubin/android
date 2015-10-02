@@ -117,7 +117,7 @@ public class MisSubastas extends ActionBarActivity  {
 		textName.setText("Bienvenido "+UsrName);
 		
 		IdUsr=preferencias.getString("IdUsr","");
-		
+		/*
 		if(isOnline()) new LoadAllProducts().execute();
 		else 
 			{
@@ -135,7 +135,7 @@ public class MisSubastas extends ActionBarActivity  {
 			//btnNuevaSol.setEnabled(false);
 			
 			}
-		
+		*/
 		
 		
 		// Get listview
@@ -149,23 +149,22 @@ public class MisSubastas extends ActionBarActivity  {
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {			
 
-				if(isOnline())
-				{
+				if(isOnline()) {
 					//textPedidosRealizados.setText("Verifica tu conexion a INTERNET");
 					//btnNuevaSol.setEnabled(false);
-					
-				// getting values from selected ListItem
-				String pid = ((TextView) view.findViewById(R.id.id)).getText().toString();
-				String activo = ((TextView) view.findViewById(R.id.activo)).getText().toString();
 
-				Intent in = new Intent("com.embeddedLapps.finSubastas");
-				
-				// sending pid to next activity
-				in.putExtra(TAG_PID, pid);		
-				in.putExtra("id_usr", IdUsr);
-				in.putExtra(TAG_ACTIVO, activo);
-				
+					// getting values from selected ListItem
+					String pid = ((TextView) view.findViewById(R.id.id)).getText().toString();
+					String activo = ((TextView) view.findViewById(R.id.activo)).getText().toString();
 
+					//Intent in = new Intent("com.embeddedLapps.finSubastas");
+
+					// sending pid to next activity
+					//in.putExtra(TAG_PID, pid);
+					//in.putExtra("id_usr", IdUsr);
+					//in.putExtra(TAG_ACTIVO, activo);
+				
+/*
 				startActivityForResult(in, 100);
 				}
 				else 
@@ -181,12 +180,9 @@ public class MisSubastas extends ActionBarActivity  {
 				}
 			}
 		});
-	}
-	
-	static class ViewHolder {
-	    TextView text;
-	}
-	
+		*/
+				}}
+
 	/*public void Nueva_Solicitud(View vieww) //declarado en la vista del boton en el archivo xml
 	{
 		Intent i = new Intent("com.embeddedLapps.NuevoPedido");
@@ -199,36 +195,13 @@ public class MisSubastas extends ActionBarActivity  {
 		i.putExtra("nuevop","yes" );
 		startActivity(i); //mod a--> forResult
 	}*/
-	
-	@Override
-	public void onBackPressed() {
-		Log.d("back","preciono regreso");
 
-		moveTaskToBack(true);// borra el stack de retroceso
-		finish();
-	}
-	
 	
 	
 
 	//Menu Action Bar & Go to New Activity
-	
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-        super.onCreateOptionsMenu(menu);
-        //CreateMenu(menu);
-    	getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-	}
-	
-	
-	 @Override
-	    public boolean onOptionsItemSelected(MenuItem item)
-	    {    
-	         return MenuChoice(item);    
-	    }    
-	   
+
+
 	 
 		
 	/*	@SuppressLint("NewApi")
@@ -451,4 +424,4 @@ public class MisSubastas extends ActionBarActivity  {
 	
 	
 
-}
+

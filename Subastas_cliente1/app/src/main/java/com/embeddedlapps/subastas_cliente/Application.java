@@ -20,61 +20,65 @@ import java.util.List;
 
 public class Application extends android.app.Application {
 
-  public Application() {
-  }
+    public Application() {
+    }
 
-  @Override
-  public void onCreate() {
-    super.onCreate();
+    @Override
+    public void onCreate() {
+        super.onCreate();
 
-    // Initialize the Parse SDK.
-    Parse.initialize(this, "FpPXHdgWc7XHoCnktm2eLHODLRKQbaq6B4hZFwcV", "fdwlJSyO9QAyapI8tLtAnJ4JFEbQ2LMEZlCJUzRu");
+        // Initialize the Parse SDK.
+        Parse.initialize(this, "g0p79lQxI51ZETZtwKTCZuqjf1YyxQUZn8Qy1kQb", "tUKgzMsZ09LbLIIdwSZyIH1PVcu24aEcMpxcWH4A");
 
-    // Specify an Activity to handle all pushes by default.
-    PushService.setDefaultPushCallback(this, MisSubastas.class);
-    // Save the current Installation to Parse.
-    ParseInstallation.getCurrentInstallation().saveInBackground();
-
-
+        // Specify an Activity to handle all pushes by default.
+        PushService.setDefaultPushCallback(this, MisSubastas.class);
+        // Save the current Installation to Parse.
+        ParseInstallation.getCurrentInstallation().saveInBackground();
 
 
 
-    //Se crea el usuario aqui
-    String name="usuario1";
-    String passw="pass";
-    String usuario=name;
-    String pass=passw;
 
-    String email="usuario1f@example.com";
-    ParseUser user = new ParseUser();
-    user.setUsername(usuario);
-    user.setPassword(pass);
-    user.setEmail(email);
+
+        //Se crea el usuario aqui
+        String name="usuario2";
+        String passw="pass";
+        String usuario=name;
+        String pass=passw;
+
+        String email="usuario2f@example.com";
+        ParseUser user = new ParseUser();
+        user.setUsername(usuario);
+        user.setPassword(pass);
+        user.setEmail(email);
 // other fields can be set just like with ParseObject
-    // user.put("phone", "650-253-0090");
+        // user.put("phone", "650-253-0090");
 
-    user.signUpInBackground(new SignUpCallback() {
+        user.signUpInBackground(new SignUpCallback() {
 
-      @Override
-      public void done(com.parse.ParseException e) {
-        if (e == null) {
-          // Hooray! Let them use the app now.
-        } else {
-          // Sign up didn't succeed. Look at the ParseException
-          // to figure out what went wrong
-        }
-      }
-    });
 
-    try {
-      //Esta parte nos vicula nuestro dispositivo con nuestra cuenta
-      ParseInstallation installation = ParseInstallation.getCurrentInstallation();
-      installation.put("Usuarios", ParseUser.getCurrentUser());
-      installation.saveInBackground();
-    }catch (Exception e)
-    {
 
-    };
+            public void done(com.parse.ParseException e) {
+                if (e == null) {
+                    // Hooray! Let them use the app now.
+                } else {
+                    // Sign up didn't succeed. Look at the ParseException
+                    // to figure out what went wrong
+                }
+            }
+        });
+
+try
+{
+    //Esta parte nos vicula nuestro dispositivo con nuestra cuenta
+    ParseInstallation installation = ParseInstallation.getCurrentInstallation();
+    installation.put("Usuarios", ParseUser.getCurrentUser());
+    installation.saveInBackground();
+}catch (Exception e)
+{
+
+}
+
+
 
 
 // Find users near a given location
@@ -92,7 +96,7 @@ public class Application extends android.app.Application {
     push.sendInBackground();
 
 
-  }
+    }
 
 
 }
