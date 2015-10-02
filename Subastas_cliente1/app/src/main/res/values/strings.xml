@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Kraken Auto-Partes</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <color name="fondo_archivo">#FFFFFF</color>
+    <string name="LogNombre">Nombre:</string>
+    <string name="logEmail">Email:</string>
+    <string name="logTelefono">Teléfono:</string>
+    <string name="chkbox">Acepto las políticas de privacidad</string>
+    <string name="PedidosRealizados">Pedidos Realizados</string>
+    <string name="SelecOpcion">Seleccione su pedido</string>
+    <string name="NomPieza">Escribe el nombre de la pieza</string>
+    <string name="Marca">Marca</string>
+    <string name="Modelo">Modelo</string>
+    <string name="Ano">Año</string>
+    <string name="AgFoto">¿Desea agregar una foto de su pieza?</string>
+    <string name="chkboxnuevapieza">solo piezas nuevas</string>
+    <string name="DescPieza">Escribe los detalles de la pieza o vehículo</string>
+    <string name="NoImg">No hay imagen</string>
+    <string name="txtPiezaSol">Pieza solicitada</string>
+    <string name="txtDisponibilidad">Fecha de entrega:</string>
+    <string name="txtLblPrecio">Precio $</string>
+    <string name="txtSuImg">Pieza o auto solicitado</string>
+    <string name="txtImgVend">Pieza o auto del vendedor</string>
+    <string name="txtComentVendedor">Comentarios del vendedor</string>
+    <string name="btnEnvSol">Enviar Solicitud</string>
+    <string name="btnComprar">Comprar</string>
+    <string name="txtRealizarPago">Favor de realizar su pago en</string>
+    <string name="txtBanco">Banco:</string>
+    <string name="txtNomPersonaBanco">A nombre de:</string>
+    <string name="txtNumCuenta">Número de cuenta:</string>
+    <string name="txtClabe">Clabe interbancaria</string>
+    <string name="txtConfPago">Confirmar pago al teléfono</string>
+    <string name="txtNumTel">442 213 3640</string>
+    <string name="chkPagTotal">Si</string>
+    <string name="chkPagPar">pago parcial</string>
+    <string name="txtAnexComp">Envie la imagen de su deposito o transferencia</string>
+    <string name="txtDatoEntrega">Indique los datos de entrega de su pedido</string>
+    <string name="chkFactura">Requiere factura</string>
+    <string name="txtFacRfc">RFC:</string>
+    <string name="txtFacDirecc">Dirección:</string>
+    <string name="txtFactEmail">Email:</string>
+    <string name="txtCantDepo">Cantidad a depositar</string>
+    <string name="txtNomBanco">Ixe banco</string>
+    <string name="txtPerBanco">David Serrano Celis</string>
+    <string name="txtCuenta">1174567-3</string>
+    <string name="txtClabeBanco">032180000117456736</string>
+    <string name="txtConfirPago">Confirme la recepción de su pago llamando al número:</string>
+    <string name="txtTel1">Tel. 442 213 3640</string>
+    <string name="txtTel2">Cel. 442 3725298</string>
+    <string name="txtYaRealizoPago">¿Realizó el deposito o transferencia bancaria?</string>
+
+</resources>

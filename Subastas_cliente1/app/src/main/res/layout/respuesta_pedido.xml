@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+   	android:fillViewport="true" >
+   	
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" android:background="#ffffff">
+
+        
+        
+    <!-- Header Start -->        
+<LinearLayout
+    	  android:id="@+id/welcome"
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          >
+       
+    <!-- Welcome Label -->   
+		  <TextView 
+		      android:id="@+id/saludoinicial"
+		      android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:textColor="#33B5E5"
+              android:textSize="20sp"
+              android:gravity="start"
+              android:text="@string/LogNombre"/> 
+
+    		<TextView 
+    		  android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:textSize="1sp"
+              android:background="#FFBB33" 
+              android:layout_marginBottom="5dip" />
+    		
+    		<!-- Nombre de la pieza Label -->   
+		  <TextView 
+		      android:id="@+id/textPiezasol"
+		      android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:textColor="#33B5E5"
+              android:layout_marginTop="5dip"
+              android:layout_marginBottom="5dip"
+              android:textSize="15sp"
+              android:gravity="left"
+              android:text="@string/txtPiezaSol"/> 
+
+    		
+</LinearLayout>  
+<!-- Header Ends -->
+
+
+
+
+<!-- Form Start -->
+<TableLayout 
+   android:id="@+id/tabLay"
+   android:orientation="vertical"
+   android:layout_width="fill_parent"
+   android:layout_height="wrap_content"
+   android:layout_below="@id/welcome"
+   
+   >
+    <!-- Row label Disponiblidad y precio -->		
+    <TableRow android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+        android:layout_column="0"    
+        android:id="@+id/txtDisponibilidad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txtDisponibilidad"
+        android:gravity="left"
+		android:textColor="#33B5E5"
+		android:layout_weight="1"
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="5dip"/>
+        <TextView
+        android:layout_column="1"    
+        android:id="@+id/txtLblPrecio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txtLblPrecio"
+        android:gravity="left"
+		android:textColor="#33B5E5"
+		android:layout_weight="1"
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="5dip"/>
+    </TableRow>
+    
+    
+    <!-- Row Disponibilidad y precio -->		
+    <TableRow android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+        android:layout_column="0"    
+        android:id="@+id/textDisponible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inmediata"
+        android:gravity="left"
+        android:textColor="#FFFFFF"
+        android:background="#33B5E5"
+        android:layout_weight="1"
+        
+        />
+        <TextView
+        android:layout_column="0"    
+        android:id="@+id/textPrecio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$"
+        android:gravity="left"
+        android:textColor="#FFFFFF"
+        android:background="#33B5E5"
+        android:layout_weight="1"
+        
+        />
+    </TableRow>
+    
+
+    				
+ </TableLayout>
+<!-- Form Ends -->
+
+
+
+
+
+<!-- Linear Form Star -->
+<LinearLayout
+    	  android:id="@+id/linForm"
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/tabLay"
+          >
+    
+     <!-- Espacio --> 
+     <TextView 
+    		  android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:textSize="1sp"
+              android:background="#FFBB33"
+              android:layout_marginTop="10dip"
+              android:layout_marginBottom="10dip"
+              />
+    
+        <!-- Label su imagen -->
+     <TextView
+            
+        android:id="@+id/txtSuImg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txtSuImg"
+        android:gravity="center"
+		android:textColor="#33B5E5"
+		
+        />
+     
+     <!-- Imagen producto -->
+     <ImageView
+        
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fondoimagenes"
+        
+        />
+     
+     <!-- Espacio --> 
+     <TextView 
+    		  android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:textSize="1sp"
+              android:background="#FFBB33"
+              android:layout_marginTop="10dip"
+              android:layout_marginBottom="10dip"
+              />
+    
+     
+     <!-- Label imagen vendedor -->
+     <TextView
+           
+        android:id="@+id/txtImgVendedor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txtImgVend"
+        android:gravity="center"
+		android:textColor="#33B5E5"
+        />
+     
+     <!-- Imagen del vendedor -->
+     <ImageView
+         
+        android:id="@+id/ImageVendedor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fondoimagenes"
+        
+        />
+     
+     <!-- Espacio --> 
+     <TextView 
+    		  android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:textSize="1sp"
+              android:background="#FFBB33"
+              android:layout_marginTop="10dip"
+              android:layout_marginBottom="10dip"
+              />
+     
+     <!-- Comentarios del vendedor Label -->   
+		  <TextView 
+		      android:id="@+id/txtlblComVend"
+		      android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:textColor="#33B5E5"
+              android:layout_marginBottom="5dip"
+              android:text="@string/txtComentVendedor"/> 
+              
+	<TextView 
+		      android:id="@+id/textComVende"
+		      android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:textColor="#33B5E5"
+              android:layout_marginBottom="5dip"
+              android:text="La pieza es usada"/> 
+ 		
+</LinearLayout>  
+    
+    
+<!-- Linear For Ends -->
+
+
+<!-- Footer Start -->
+
+<RelativeLayout
+    android:id="@+id/footer"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_below="@+id/linForm"
+    android:layout_alignParentBottom="true"
+    android:orientation="vertical" >
+
+    <!-- Logo Start -->
+
+    <ImageView
+        android:id="@+id/imageFooter"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:src="@drawable/footer_repeat" />
+    <!-- Logo Ends -->
+
+    <Button
+        android:id="@+id/buttonComprar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageFooter"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/btnvacio"
+        android:onClick="Send_comprar"
+        android:text="@string/btnComprar" 
+        android:textColor="#FFFFFF"
+        />
+
+</RelativeLayout>
+
+<!-- Footer Ends -->
+    
+    
+    </RelativeLayout>
+</ScrollView>

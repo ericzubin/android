@@ -1,0 +1,129 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:fillViewport="true" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" android:background="#ffffff">
+ 
+        <!--  Header Starts-->
+    <LinearLayout 
+    android:orientation="vertical"
+    android:id="@+id/header"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+        <!-- Logo Start-->
+        <ImageView android:src="@drawable/img_carronombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        <!-- Logo Ends -->
+
+</LinearLayout>
+        <!--  Header Ends -->
+ 
+ 
+ 
+ 
+
+<!-- Login Form -->
+<LinearLayout
+    	  android:id="@+id/lgForm"
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:padding="10dip"
+          android:layout_below="@id/header">
+    
+		  <!-- Name Label -->   
+		  <TextView 
+		      android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:textColor="#372c24"
+              android:text="@string/LogNombre"/> 
+          
+          <EditText 
+              android:id="@+id/editNombre"
+              android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:layout_marginBottom="20dip"
+                android:inputType="textPersonName"
+                android:singleLine="true"/>
+    
+          <!--  Email Label -->
+          <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#372c24"
+                android:text="@string/logEmail"/>
+          <EditText 
+              	android:id="@+id/editEmail"
+              	android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:layout_marginBottom="20dip"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"/>
+          <!--  Phone Label -->
+          <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#372c24"
+                android:text="@string/logTelefono"/>
+          <EditText 
+                android:id="@+id/editCel"
+              	android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:inputType="phone"
+                android:singleLine="true"
+                />
+          <!-- CheckBox -->
+          <CheckBox
+          android:id="@+id/checkPoliticas"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5dip"
+          android:text="@string/chkbox" />
+          
+          <!-- Login button -->
+
+          <ImageButton
+              android:id="@+id/btnIngresar"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:onClick="IngresarSistema"
+              android:background="@null"
+              android:layout_marginTop="15dip"
+              android:layout_marginLeft="80dip"
+              android:src="@drawable/btn_empezar" />
+ 
+</LinearLayout>    
+        
+        <!-- Login Form Ends -->
+        
+        
+        
+            <!-- Footer Start -->
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@+id/footer"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_below="@id/lgForm"
+    android:layout_alignParentBottom="true">
+          
+    <!-- Logo Start-->
+        <ImageView android:src="@drawable/img_barralg"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            />
+        <!-- Logo Ends -->      
+    
+</LinearLayout>
+<!-- Footer Ends -->
+ 
+ 
+  </RelativeLayout>
+
+</ScrollView>

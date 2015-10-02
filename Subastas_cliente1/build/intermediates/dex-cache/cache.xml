@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\ERIC\Documents\Android\Subastas_cliente1\app\libs\Parse-1.4.2.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="eff28d7e2ff7c6cf1d312079af5d4152bc5cb48b">
+        <dex dex="C:\Users\ERIC\Documents\Android\Subastas_cliente1\app\build\intermediates\pre-dexed\debug\Parse-1.4.2-150b3672941aff524160d0704f217fc3297b087f.jar" />
+    </item>
+    <item
+        jar="C:\Users\ERIC\Documents\Android\Subastas_cliente1\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\19.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28">
+        <dex dex="C:\Users\ERIC\Documents\Android\Subastas_cliente1\app\build\intermediates\pre-dexed\debug\classes-bbc6b0c0e107f62657b958e5f6c1d84951b0c3dd.jar" />
+    </item>
+    <item
+        jar="C:\Users\ERIC\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
+        <dex dex="C:\Users\ERIC\Documents\Android\Subastas_cliente1\app\build\intermediates\pre-dexed\debug\support-v4-19.1.0-296732a77912aa6ccc94a58a3e9d7268162bcba6.jar" />
+    </item>
+    <item
+        jar="C:\Users\ERIC\Documents\Android\Subastas_cliente1\app\libs\httpmime-4.2.4.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="5416cd6fd728350554b8b1d02612a5c143915325">
+        <dex dex="C:\Users\ERIC\Documents\Android\Subastas_cliente1\app\build\intermediates\pre-dexed\debug\httpmime-4.2.4-52327eea8fd651d20d1687df804b298aeb7d2d64.jar" />
+    </item>
+
+</items>

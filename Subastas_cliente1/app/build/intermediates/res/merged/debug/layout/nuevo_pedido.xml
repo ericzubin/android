@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+   	android:fillViewport="true" >
+   	
+    
+   	
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:background="#ffffff">
+
+        <!--  Quitar el foco de los editText y mostrar toda la activity -->
+        <LinearLayout 
+
+            android:focusable="true"
+            android:focusableInTouchMode="true" 
+            android:layout_width="0px"
+            android:layout_height="0px" >
+           <requestFocus />
+        </LinearLayout>
+        
+    <!-- Header Start -->        
+<LinearLayout
+    	  android:id="@+id/welcome"
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          >
+       
+    <!-- Welcome Label -->   
+		  <TextView 
+		      android:id="@+id/saludoinicial"
+		      android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:textColor="#33B5E5"
+              android:textSize="20sp"
+              android:gravity="start"
+              android:text="@string/LogNombre"/> 
+
+    		<TextView 
+    		  android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:textSize="1sp"
+              android:background="#FFBB33" 
+              android:layout_marginBottom="5dip"
+               />
+    		
+</LinearLayout>  
+<!-- Header Ends -->
+
+
+
+
+<!-- Form Start -->
+<TableLayout 
+   android:id="@+id/tabLay"
+   android:orientation="vertical"
+   android:layout_width="match_parent"
+   android:layout_height="wrap_content"
+   android:stretchColumns="1"
+   android:layout_below="@id/welcome"
+   >
+    <!-- Row Selecciona una opcion -->		
+    <TableRow >
+        <TextView
+        android:layout_column="0"    
+        android:id="@+id/txtElgOpc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/SelecOpcion"
+		android:textColor="#33B5E5"
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="5dip"
+        android:layout_weight="0.2"/>
+        <Spinner
+        android:layout_column="1"    
+        android:id="@+id/spinRefacciones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="5dip"
+       />
+    </TableRow>
+    <!-- Row Nombre de la pieza -->		
+    <TableRow >
+       
+        <EditText
+            
+            android:id="@+id/editNombrepieza"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:textSize="14sp"
+            android:lines="2"
+            android:layout_marginTop="5dip"
+            android:layout_marginBottom="5dip"
+            android:layout_span="2"
+            android:hint="@string/NomPieza"/>
+    </TableRow>
+    
+    <!-- Row Espacio -->
+    <TableRow >
+        <TextView 
+              android:layout_column="0"
+    		  android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:textSize="1sp"
+              android:background="#FFBB33"
+              android:layout_marginTop="5dip"
+              android:layout_marginBottom="5dip"
+               />
+        <TextView 
+              android:layout_column="1"
+    		  android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:textSize="1sp"
+              android:background="#FFBB33"
+              android:layout_marginTop="5dip"
+              android:layout_marginBottom="5dip"
+               />
+    </TableRow>
+    
+    
+    <!-- Row Marca -->		
+    <TableRow >
+        
+        <TextView
+        android:layout_column="0"    
+        android:id="@+id/txtMarca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Marca"
+        android:textColor="#33B5E5"
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="5dip"
+        android:layout_weight="0.2"/>
+        <Spinner
+        android:layout_column="1"    
+        android:id="@+id/spinMarca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="5dip"
+       />
+    </TableRow>
+    <!-- Row Modelo -->		
+    <TableRow >
+        <TextView
+        android:layout_column="0"    
+        android:id="@+id/txtModelo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Modelo"
+        android:textColor="#33B5E5"
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="5dip"
+        android:layout_weight="0.2"/>
+        <Spinner
+        android:layout_column="1"    
+        android:id="@+id/spinModelo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="5dip"
+       />
+    </TableRow>
+    <!-- Row Año -->		
+    <TableRow >
+        <TextView
+        android:layout_column="0"    
+        android:id="@+id/txtAno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Ano"
+        android:textColor="#33B5E5"
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="5dip"
+        android:layout_weight="0.2"/>
+        <Spinner
+        android:layout_column="1"    
+        android:id="@+id/spinAno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="5dip"
+       />
+    </TableRow>
+    
+    
+    <!-- Row Espacio -->
+    <TableRow >
+        <TextView 
+              android:layout_column="0"
+    		  android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:textSize="1sp"
+              android:background="#FFBB33"
+              android:layout_marginTop="5dip"
+              android:layout_marginBottom="5dip"
+               />
+        <TextView 
+              android:layout_column="1"
+    		  android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:textSize="1sp"
+              android:background="#FFBB33"
+              android:layout_marginTop="5dip"
+              android:layout_marginBottom="5dip"
+               />
+    </TableRow>
+    
+    <!-- Row Agregue una foto de su pieza -->		
+    <TableRow >
+       <TextView
+          
+        android:id="@+id/txtAgFoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/AgFoto"
+        android:textColor="#33B5E5"
+        android:layout_span="2"
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="5dip"/> 
+    </TableRow>
+    
+    <!-- Row Seleccionar imagen -->		
+    <TableRow >
+       <Spinner
+          
+        android:id="@+id/spinImagen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        
+       />  
+    </TableRow>
+    
+    <!-- Row Seleccionar imagen -->		
+    <TableRow >
+      <TextView
+        android:layout_span="2"
+        android:id="@+id/txtNoImg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/NoImg"
+        android:background="#33B5E5"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="5dip"/>
+    </TableRow>
+    
+       
+    				
+ </TableLayout>
+<!-- Form Ends -->
+
+
+
+
+
+<!-- Linear Form Star -->
+<LinearLayout
+    	  android:id="@+id/linForm"
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/tabLay"
+          >
+    <!--  
+    <CheckBox
+        android:id="@+id/check_piezasnuevas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#33B5E5"
+        android:text="@string/chkboxnuevapieza" />
+        -->
+    
+     <!-- DescrPiez Label -->   
+		  <TextView 
+		      android:id="@+id/txtDescPieza"
+		      android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:textColor="#33B5E5"
+              android:layout_marginTop="5dip"
+              android:layout_marginBottom="5dip"
+              android:text="@string/DescPieza"
+              android:visibility="gone"/> 
+              
+	<EditText
+        android:id="@+id/editDescrip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine" 
+        android:textSize="14sp"
+        android:layout_marginTop="15dip"
+        android:hint="@string/DescPieza"/>
+ 		
+</LinearLayout>  
+    
+    
+<!-- Linear For Ends -->
+
+
+<!-- Footer Start -->
+
+<RelativeLayout
+    android:id="@+id/footer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/linForm"
+    android:layout_alignParentBottom="true"
+    android:orientation="vertical" >
+
+    <!-- Logo Start -->
+
+    <ImageView
+        android:id="@+id/imageFooter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/footer_repeat" />
+    <!-- Logo Ends -->
+
+	<!-- 
+    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageFooter"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="12dp"
+        android:background="@null"
+        android:onClick="Send_Solicitud"
+        android:src="@drawable/btn_enviarsolicitud" />
+		-->
+		<Button
+        android:id="@+id/buttonComprar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageFooter"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/btnvacio"
+        android:onClick="Send_Solicitud"
+        android:text="@string/btnEnvSol" 
+        android:textColor="#FFFFFF"
+        />
+
+
+</RelativeLayout>
+
+<!-- Footer Ends -->
+    
+    
+    </RelativeLayout>
+</ScrollView><!-- From: file:/C:/Users/ERIC/Documents/Android/Subastas_cliente1/app/src/main/res/layout/nuevo_pedido.xml -->
