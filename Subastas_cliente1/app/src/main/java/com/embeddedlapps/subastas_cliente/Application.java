@@ -20,106 +20,79 @@ import java.util.List;
 
 public class Application extends android.app.Application {
 
-    public Application() {
-    }
+  public Application() {
+  }
 
-    @Override
-    public void onCreate() {
-        super.onCreate();
+  @Override
+  public void onCreate() {
+    super.onCreate();
 
-        // Initialize the Parse SDK.
-        Parse.initialize(this, "FpPXHdgWc7XHoCnktm2eLHODLRKQbaq6B4hZFwcV", "fdwlJSyO9QAyapI8tLtAnJ4JFEbQ2LMEZlCJUzRu");
+    // Initialize the Parse SDK.
+    Parse.initialize(this, "FpPXHdgWc7XHoCnktm2eLHODLRKQbaq6B4hZFwcV", "fdwlJSyO9QAyapI8tLtAnJ4JFEbQ2LMEZlCJUzRu");
 
-        // Specify an Activity to handle all pushes by default.
-        PushService.setDefaultPushCallback(this, MisSubastas.class);
-        // Save the current Installation to Parse.
-        ParseInstallation.getCurrentInstallation().saveInBackground();
-
-
+    // Specify an Activity to handle all pushes by default.
+    PushService.setDefaultPushCallback(this, MisSubastas.class);
+    // Save the current Installation to Parse.
+    ParseInstallation.getCurrentInstallation().saveInBackground();
 
 
 
-        //Se crea el usuario aqui
-        String name="usuario1";
-        String passw="pass";
-        String usuario=name;
-        String pass=passw;
 
-        String email="usuario1f@example.com";
-        ParseUser user = new ParseUser();
-        user.setUsername(usuario);
-        user.setPassword(pass);
-        user.setEmail(email);
+
+    //Se crea el usuario aqui
+    String name="usuario1";
+    String passw="pass";
+    String usuario=name;
+    String pass=passw;
+
+    String email="usuario1f@example.com";
+    ParseUser user = new ParseUser();
+    user.setUsername(usuario);
+    user.setPassword(pass);
+    user.setEmail(email);
 // other fields can be set just like with ParseObject
-        // user.put("phone", "650-253-0090");
+    // user.put("phone", "650-253-0090");
 
-        user.signUpInBackground(new SignUpCallback() {
+    user.signUpInBackground(new SignUpCallback() {
 
-            @Override
-            public void done(com.parse.ParseException e) {
-                if (e == null) {
-                    // Hooray! Let them use the app now.
-                } else {
-                    // Sign up didn't succeed. Look at the ParseException
-                    // to figure out what went wrong
-                }
-            }
-        });
+      @Override
+      public void done(com.parse.ParseException e) {
+        if (e == null) {
+          // Hooray! Let them use the app now.
+        } else {
+          // Sign up didn't succeed. Look at the ParseException
+          // to figure out what went wrong
+        }
+      }
+    });
 
-        try {
-            //Esta parte nos vicula nuestro dispositivo con nuestra cuenta
-            ParseInstallation installation = ParseInstallation.getCurrentInstallation();
-            installation.put("Usuarios", ParseUser.getCurrentUser());
-            installation.saveInBackground();
-        }catch (Exception e)
-        {
-
-        };
-
-
-
-
-//Busqueda del usuario
-        ParseQuery<ParseUser> query = ParseUser.getQuery();
-        query.whereEqualTo("username", "usuario1");
-        query.findInBackground(new FindCallback<ParseUser>() {
-            @Override
-            public void done(List<ParseUser> list, com.parse.ParseException e) {
-                if (e == null) {
-
-                    Log.d("objectId ", "Retrieved " + list.get(0).getObjectId());
-                    SendPushTO(list.get(0).getObjectId());
-                } else {
-                    Log.d("objetID", "Error: " + e.getMessage());
-
-                }
-                // idOBjet = list.get(0).getObjectId().toString();
-            }
-
-
-        });
-
-
-
-
-
-
-
-    }
-    public void SendPushTO(String usuario)
+    try {
+      //Esta parte nos vicula nuestro dispositivo con nuestra cuenta
+      ParseInstallation installation = ParseInstallation.getCurrentInstallation();
+      installation.put("Usuarios", ParseUser.getCurrentUser());
+      installation.saveInBackground();
+    }catch (Exception e)
     {
-        //  Esta parte debe de tener un usuario que exista o si no crashea
-        ParseQuery pushQuery = ParseInstallation.getQuery();
-        pushQuery.whereEqualTo("Usuarios", usuario);
+
+    };
+
+
+// Find users near a given location
+    ParseQuery userQuery = ParseUser.getQuery();
+    userQuery.whereEqualTo("username", "usuario1");
+
+// Find devices associated with these users
+    ParseQuery pushQuery = ParseInstallation.getQuery();
+    pushQuery.whereMatchesQuery("Usuarios", userQuery);
 
 // Send push notification to query
-        ParsePush push = new ParsePush();
-        push.setQuery(pushQuery); // Set our Installation query
-        push.setMessage("Willie Hayes injured by own pop fly.");
-        push.sendInBackground();
+    ParsePush push = new ParsePush();
+    push.setQuery(pushQuery); // Set our Installation query
+    push.setMessage("Free hotdogs at the Parse concession stand!");
+    push.sendInBackground();
 
 
-// Send push notification to query
+  }
 
-    }
+
 }
